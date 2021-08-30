@@ -1,0 +1,94 @@
+@import "reset", "variables", "mixins";
+
+body {
+  font-family: $font-default;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: blue;
+  @include flexible (row, nowrap, center, center, auto);
+  position: relative;
+
+  .nav-left {
+    width: 40%;
+    // background-color: yellowgreen;
+    position: absolute;
+    top: 50%;
+    left: -12%;
+    -webkit-transform: rotate(-90deg); 
+
+    ul {
+      @include flexible (row, nowrap, space-around, center, auto);
+    }
+    
+    li {
+      color: #ffff;
+      text-transform: uppercase;
+      font-size: .8em;
+    }
+  }
+
+  .nav-right {
+    width: 40%;
+    // background-color: pink;
+    position: absolute;
+    top: 50%;
+    right: -12%;
+    -webkit-transform: rotate(90deg); 
+
+    ul {
+      @include flexible (row, nowrap, space-around, center, auto);
+    }
+
+    li {
+      color: #ffff;
+      text-transform: uppercase;
+      font-size: .8em;
+    }
+  }
+
+  .centered {
+    @include flexible (column, wrap, center, center, auto);
+
+    .logo-mini {
+      text-transform: uppercase;
+      color: #ffff;
+      padding: 1.5em 0em;
+    }
+
+    .btns {
+      width: 100%;
+      background-color: red;
+      @include flexible (column, wrap, center, center, auto);
+    }
+  
+    .btn-new {
+      padding: 2em 0em;
+      margin: auto;
+      display: inline-flex;
+      padding: 1em 3em;
+      border: 2px solid #ffff;
+      transition: all 0.5s ease;
+      font-weight: 600;
+      color: #ffff;
+      font-size: 1em;
+      text-transform: uppercase;
+  
+      span {
+        font-weight: 900;
+      }
+    }
+  
+    .btn-scroll {
+      font-weight: 600;
+      color: #ffff;
+      padding: 0.6em 1.5em;
+      font-size: 1em;
+      padding: 12px;
+    }
+  }
+
+ 
+
+}

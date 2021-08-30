@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  line-height: 29px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  color: black;
+  line-height: 2em;
+}
+
+p a {
+  display: inline;
+}
+
+img {
+  /* width: 100%; */
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  color: inherit;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.centered {
+  width: 80%;
+  margin: auto;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
+  position: relative;
+}
+main .nav-left {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: -12%;
+  -webkit-transform: rotate(-90deg);
+}
+main .nav-left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
+}
+main .nav-left li {
+  color: #ffff;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+main .nav-right {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  right: -12%;
+  -webkit-transform: rotate(90deg);
+}
+main .nav-right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
+}
+main .nav-right li {
+  color: #ffff;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+main .centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
+}
+main .centered .logo-mini {
+  text-transform: uppercase;
+  color: #ffff;
+  padding: 1.5em 0em;
+}
+main .centered .btns {
+  width: 100%;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
+}
+main .centered .btn-new {
+  padding: 2em 0em;
+  margin: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 1em 3em;
+  border: 2px solid #ffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-weight: 600;
+  color: #ffff;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+main .centered .btn-new span {
+  font-weight: 900;
+}
+main .centered .btn-scroll {
+  font-weight: 600;
+  color: #ffff;
+  padding: 0.6em 1.5em;
+  font-size: 1em;
+  padding: 12px;
+}
