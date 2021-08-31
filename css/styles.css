@@ -527,7 +527,7 @@ body {
 .main .model-4 .wrapper {
   width: 100%;
   min-height: 400px;
-  background-color: #212529;
+  background-color: #0d0e12;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -621,6 +621,7 @@ body {
   -ms-grid-row: 1;
   -ms-grid-row-span: 4;
   grid-row: 1/5;
+  position: relative;
 }
 .main .model-4 .wrapper-two {
   -ms-grid-column: 3;
@@ -672,6 +673,12 @@ body {
   text-transform: uppercase;
   font-size: 3em;
 }
+.main .model-4 .artist-plus {
+  width: 8%;
+  position: absolute;
+  bottom: 4em;
+  right: 4em;
+}
 .main .model-5 h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 100;
@@ -679,7 +686,7 @@ body {
   text-transform: uppercase;
   font-size: 1.3em;
   text-align: center;
-  margin: 1em 0em;
+  margin: 2em 0em 0em 0em;
 }
 .main .model-5 .social-gallery {
   display: -webkit-box;
@@ -699,7 +706,7 @@ body {
       align-content: auto;
 }
 .main .model-5 .social-gallery article {
-  margin: 0em 1em;
+  margin: 2em 0em;
   position: relative;
 }
 .main .model-5 .social-icon {
