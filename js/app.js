@@ -1,11 +1,11 @@
-const $point = $('.slider-point')
+const $line = $('.slider-line')
 const $bigSlider =  $('.big-slider')
 
 let photo = 0
 
-$point.on('click', function(){
+$line.on('click', function(){
      
-      photo = $point.index($(this))
+      photo = $line.index($(this))
  
       moveToElement()
 
@@ -21,7 +21,7 @@ function moveToElement(){
             transform:property
       })
 
-      $point.removeClass('active')
-      $point.eq(photo).addClass('active')
+      $line.removeClass('active')
+      $line.eq(photo).addClass('active')
 }
 

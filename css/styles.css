@@ -132,6 +132,7 @@ body {
 }
 body {
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 .main {
@@ -352,8 +353,9 @@ body {
 }
 .main .model-2-info {
   width: 100%;
-  min-height: 100vh;
+  min-height: 900px;
   position: absolute;
+  z-index: 4;
   top: 0%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -377,6 +379,7 @@ body {
   padding: 1.5em 0em;
   position: absolute;
   top: 0;
+  z-index: 4;
 }
 .main .model-2 h2 {
   font-family: "Montserrat", sans-serif;
@@ -449,7 +452,7 @@ body {
 .main .model-2 .slider-img {
   width: calc(100% / 3);
 }
-.main .model-2 .slider-points {
+.main .model-2 .slider-lines {
   width: 100%;
   padding: 1em;
   position: absolute;
@@ -471,16 +474,16 @@ body {
   -ms-flex-line-pack: auto;
       align-content: auto;
 }
-.main .model-2 .slider-point {
-  width: 20px;
-  height: 20px;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
+.main .model-2 .slider-line {
+  width: 50px;
+  height: 6px;
+  margin: 10px;
+  background-color: #ffffff;
   margin: 0 0.4em;
   cursor: pointer;
 }
-.main .model-2 .slider-point.active {
-  background-color: red;
+.main .model-2 .slider-line.active {
+  background-color: blue;
 }
 .main .model-3 {
   width: 100%;

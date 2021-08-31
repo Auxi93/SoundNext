@@ -2,6 +2,7 @@
 
 body {
   font-family: $font-default;
+  overflow-x: hidden;
 }
 
 .main {
@@ -145,8 +146,9 @@ body {
 
     &-info {
       width: 100%;
-      min-height: 100vh;
+      min-height: 900px;
       position: absolute;
+      z-index: 4;
       top: 0%;
       @include flexible(row, wrap, center, center, auto);
     }
@@ -157,6 +159,7 @@ body {
       padding: 1.5em 0em;
       position: absolute;
       top: 0;
+      z-index: 4;
     }
 
     h2{
@@ -208,7 +211,7 @@ body {
       width: calc(100% / 3);
     }
 
-    .slider-points {
+    .slider-lines {
       width: 100%;
       padding: 1em;
       position: absolute;
@@ -217,17 +220,17 @@ body {
       @include flexible(row, nowrap, center, center, auto);
     }
 
-    .slider-point {
-      width: 20px;
-      height: 20px;
-      background-color: rgba(0, 0, 0, 0.3);
-      border-radius: 50%;
+    .slider-line {
+      width: 50px;
+      height: 6px;
+      margin: 10px;
+      background-color: $white;
       margin: 0 0.4em;
       cursor: pointer;
     }
 
-    .slider-point.active {
-      background-color: red;
+    .slider-line.active {
+      background-color: blue;
     }
   }
 
