@@ -14,87 +14,18 @@ body {
     position: relative;
   }
 
-  .nav-left {
-    background-color: green;
-    width: 27%;
-    position: relative;
-    animation: go-down 1s ease 1 both 2.5s;
-    z-index: 3;
-
-    ul {
-      position: absolute;
-      transform: rotate(-90deg);
-      @include flexible(row, nowrap, space-around, center, auto);
-    }
-
-    li {
-      color: $white;
-      text-transform: uppercase;
-      font-size: 0.8em;
-    }
-  }
-
-  .nav-right {
-    width: 27%;
-    position: relative;
-    animation: go-top 2s ease 1 both 2.5s;
-    z-index: 3;
-
-    ul {
-      position: absolute;
-      right: 0;
-      transform: rotate(90deg);
-      @include flexible(row, nowrap, space-around, center, auto);
-    }
-
-    li {
-      color: $white;
-      text-transform: uppercase;
-      font-size: 0.8em;
-    }
-  }
-
-  .slider-container {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-  }
-
-  .single-slide {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    opacity: 0;
-    animation: slider-animation;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    background-size: cover;
-  }
-
-  #slide-1 {
-    background-image: url(https://images7.alphacoders.com/391/391001.jpg);
-    background-size: cover;
-  }
-  #slide-2 {
-    animation-delay: 3s;
-    background-image: url(https://images5.alphacoders.com/426/426029.jpg);
-  }
-  #slide-3 {
-    animation-delay: 6s;
-    background-image: url(https://images7.alphacoders.com/391/391001.jpg);
-  }
-  &-model1 {
+  .model1-info {
     width: 100%;
     min-height: 100vh;
     position: absolute;
     top: 0%;
     @include flexible(column, wrap, center, center, auto);
 
-    .span-model1 {
+    .span-model {
       text-transform: uppercase;
       color: $white;
       padding: 1.5em 0em;
+      text-align: center;
       position: absolute;
       top: 0;
     }
@@ -136,9 +67,132 @@ body {
     }
   }
 
+
+  .nav-left {
+    width: 37%;
+    position: absolute;
+    left: 0;
+    animation: go-top 1s ease 1 both 1.5s;
+    z-index: 3;
+
+    ul {
+      min-height: 100vh;
+      transform: rotate(-90deg);
+      @include flexible(row, nowrap, space-around, center, auto);
+    }
+
+    li {
+      color: $white;
+      text-transform: uppercase;
+      font-size: 0.6em;
+    }
+  }
+
+  .nav-right {
+    width: 37%;
+    position: absolute;
+    right: 0;
+    animation: go-down 1s ease 1 both 3s;
+    z-index: 3;
+
+    ul {
+      min-height: 100vh;
+      transform: rotate(90deg);
+      @include flexible(row, nowrap, space-around, center, auto);
+    }
+
+    li {
+      color: $white;
+      text-transform: uppercase;
+      font-size: 0.6em;
+    }
+  }
+
+  .slider-container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .single-slide {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    animation: slider-animation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    background-size: cover;
+  }
+
+  #slide-1 {
+    background-image: url(https://images7.alphacoders.com/391/391001.jpg);
+    background-size: cover;
+  }
+  #slide-2 {
+    animation-delay: 3s;
+    background-image: url(https://images5.alphacoders.com/426/426029.jpg);
+  }
+  #slide-3 {
+    animation-delay: 6s;
+    background-image: url(https://images7.alphacoders.com/391/391001.jpg);
+  }
+ 
   .model-2 {
     @include flexible(row, nowrap, center, center, auto);
+    position: relative;
 
+    &-info {
+      width: 100%;
+      min-height: 100vh;
+      position: absolute;
+      top: 0%;
+      @include flexible(row, wrap, center, center, auto);
+    }
+
+    .span-model {
+      text-transform: uppercase;
+      color: $white;
+      padding: 1.5em 0em;
+      position: absolute;
+      top: 0;
+    }
+
+    h2{
+      font-family: $font-default;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: $white;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .new-way {
+      width: 64%;
+      @include flexible(row, nowrap, flex-start, center, auto);
+
+      img {
+        margin: 2em;
+      }
+ 
+      &-h3 {
+        font-family: $font-default;
+        font-weight: 300;
+        font-size: 1.5em;
+        color: $white;
+        text-transform: uppercase;
+      }
+
+      &-p {
+        width: 60%;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        color: $white;
+        font-size: 1em;
+        text-align: left;
+      }
+    }
+    
     .slider {
       width: 100%;
       overflow: hidden;
@@ -157,6 +211,9 @@ body {
     .slider-points {
       width: 100%;
       padding: 1em;
+      position: absolute;
+      bottom: 1em;
+      z-index: 4;
       @include flexible(row, nowrap, center, center, auto);
     }
 

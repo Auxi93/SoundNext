@@ -1,6 +1,6 @@
 @keyframes go-down {
   from {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
     opacity: 0;
   }
   to {
@@ -9,7 +9,7 @@
 }
 @keyframes go-top {
   from {
-    transform: translateY(100%);
+    transform: translateY(50%);
     opacity: 0;
   }
   to {
