@@ -10,35 +10,88 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"/>
-    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="https://www.soundnext.com/images/favicon/favicon-32x32.png" sizes="32x32">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
-    <script src="js/apps.js" defer></script>
+    <script src="js/app.js" defer></script>
   </head>
   <body class="index">
-    <main>  
-      <nav class="nav-left">
-        <ul>
-          <li>Musical production for the digital age</li>
-          <li>Mastering</li>
-        </ul>
-      </nav>
-      <nav class="nav-right">
-        <ul>
-          <li>Production</li>
-          <li>Composing for film</li>
-          <li>The art of music</li>
-        </ul>
-      </nav>
-      <div class="centered">
-        <span class="logo-mini">Soundnext</span>
-        <img class="logo-principal" src="assets/logo.png" alt="Sound Next"/>
-        <div class="btns">
-          <a href="#" class="btn-new">A <strong>new way</strong> to learn music</a>
-          <a href="#" class="btn-scroll">Scroll down to discover more_</a>
+    <main class="main">  
+      <section class="model-1">
+        <nav class="nav-left">
+          <ul>
+            <li>Musical production for the digital age</li>
+            <li>Mastering</li>
+          </ul>
+        </nav>
+        <nav class="nav-right">
+          <ul>
+            <li>Production</li>
+            <li>Composing for film</li>
+            <li>The art of music</li>
+          </ul>
+        </nav>
+        <div class="slider-container">
+          <div class="single-slide" id="slide-1"></div>
+          <div class="single-slide" id="slide-2"></div>
+          <div class="single-slide" id="slide-3"></div>
         </div>
-      </div>
+        <div class="main-model1">
+            <span class="span-model1">Soundnext</span>
+            <div class="text-model1">
+              <img class="logo-model1" src="assets/logotype.png" alt="Sound Next"/>
+              <div class="btns">
+                <a href="#" class="btn-new">A new way to learn music</a>
+                <a href="#" class="btn-scroll">Scroll down to discover more_</a>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="model-2">
+        <div class="slider">
+          <div class="big-slider">
+             <img class="slider-img" src="assets/img-slider-1.png" alt="">
+             <img class="slider-img" src="assets/img-slider-2.png" alt="">
+             <img class="slider-img"src="assets/img-slider-3.png" alt="">
+          </div>
+          <ul class="slider-points">
+              <li class="slider-point active"></li>
+              <li class="slider-point"></li>
+              <li class="slider-point"></li>
+          </ul>
+        </div>        
+      </section>
+      <section class="model-3">
+        <div class="centered">
+          <nav>
+            <ul>
+              <li>
+                <img src="assets/our-partners.png" alt="Our partners"/>
+              </li>
+              <li>
+                <img src="assets/steinberg.png" alt="steinberg"/>
+              </li>
+              <li>
+                <img src="assets/yamaha.png" alt="Yamaha"/>
+              </li>
+              <li>
+                <img src="assets/abe.png" alt="Ableton"/>
+              </li>
+              <li>
+                <img src="assets/output.png" alt="Output"/>
+              </li>
+              <li>
+                <img src="assets/spitrife.png" alt="Spitrife"/>
+              </li>
+              <li>
+                <img src="assets/partner4.png" alt="Native Instruments"/>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+      </section>
       
     </main>
   </body>
