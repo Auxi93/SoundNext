@@ -1,12 +1,5 @@
-@keyframes go-down {
-  from {
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0%);
-  }
-}
+
+//Upload the text on the left
 @keyframes go-top {
   from {
     transform: translateY(50%);
@@ -16,7 +9,45 @@
     transform: translateY(0%);
   }
 }
-//Necesita cambiar esto
+
+//Down the text on the right
+@keyframes go-down {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+//The sound next logo appears and a few minutes later part of a button and the other button appears.
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+//The button border appears
+@keyframes move-border {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    border: 2px solid $white;
+    opacity: 1;
+  }
+}
+
+//Model 1 images change with opacity
 @keyframes slider-animation {
   0% {
     opacity: 0;

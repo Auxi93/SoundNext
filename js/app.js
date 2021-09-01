@@ -1,5 +1,7 @@
 const $line = $('.slider-line')
 const $bigSlider =  $('.big-slider')
+const $btnNew = $('.btn-new')
+
 
 let photo = 0
 
@@ -10,6 +12,12 @@ $line.on('click', function(){
       moveToElement()
 
 })
+
+//funciona pero quiero que primero aparezca el texto y luego el borde no al revés
+
+// setTimeout(function(){
+//       $btnNew.addClass('active')
+// },)
 
 function moveToElement(){
       

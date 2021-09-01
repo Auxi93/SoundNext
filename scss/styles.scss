@@ -2,6 +2,7 @@
 
 body {
   font-family: $font-default;
+  overflow-x: hidden;
 }
 
 .main {
@@ -16,7 +17,7 @@ body {
       width: 37%;
       position: absolute;
       left: 0;
-      animation: go-top 1s ease 1 both 1.5s;
+      animation: go-top 1.5s ease 1 both 1.5s;
       z-index: 3;
 
       ul {
@@ -36,7 +37,7 @@ body {
       width: 37%;
       position: absolute;
       right: 0;
-      animation: go-down 1s ease 1 both 3s;
+      animation: go-down 1.5s ease 1 both 1.5s;
       z-index: 3;
 
       ul {
@@ -106,6 +107,8 @@ body {
 
     .logo-model1 {
       width: 40%;
+      animation: appear 2s linear 1 both 2.4s;
+      transition: all .5s ease;
     }
 
     .btns {
@@ -118,13 +121,16 @@ body {
       padding: 2em 0em;
       margin: auto;
       display: inline-flex;
+      border: 0px;
       padding: 1em 3em;
-      border: 2px solid $white;
       transition: all 0.5s ease;
       font-weight: 600;
       color: $white;
       font-size: 1em;
       text-transform: uppercase;
+      transition: all .3s ease;
+      animation: appear 1s ease 1 both 2.5s;
+      animation: move-border 3s ease 1 both 5s;
     }
 
     .btn-scroll {
@@ -133,6 +139,9 @@ body {
       padding: 0.6em 1.5em;
       font-size: 1em;
       padding: 12px;
+      transition: all .5s ease;
+      animation: appear 1.2s linear infinite both 8s;
+
     }
   }
 
