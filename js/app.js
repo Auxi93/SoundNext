@@ -1,6 +1,6 @@
 const $line = $('.slider-line')
 const $bigSlider =  $('.big-slider')
-const $btnNew = $('.btn-new')
+const $btn = $('.btn-new')
 
 
 let photo = 0
@@ -13,11 +13,20 @@ $line.on('click', function(){
 
 })
 
-//funciona pero quiero que primero aparezca el texto y luego el borde no al revés
+$(window).on('scroll', function(){
 
-// setTimeout(function(){
-//       $btnNew.addClass('active')
-// },)
+      let pixel = $(window).scrollTop()
+      $btn.addClass('hide')
+
+  
+      $('.parallax1').css({
+          transform: `translateY(${-pixel}px)`
+      })
+      $('.parallax2').css({
+          transform: `translateY(${-pixel/5}px)`
+      })
+})
+  
 
 function moveToElement(){
       
@@ -32,4 +41,3 @@ function moveToElement(){
       $line.removeClass('active')
       $line.eq(photo).addClass('active')
 }
-

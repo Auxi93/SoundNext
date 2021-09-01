@@ -118,24 +118,6 @@ body {
     opacity: 1;
   }
 }
-@-webkit-keyframes move-border {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    border: 2px solid #ffffff;
-    opacity: 1;
-  }
-}
-@keyframes move-border {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    border: 2px solid #ffffff;
-    opacity: 1;
-  }
-}
 @-webkit-keyframes slider-animation {
   0% {
     opacity: 0;
@@ -172,13 +154,13 @@ body {
 }
 body {
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
 }
 
 .main {
   width: 100%;
   min-height: 100vh;
   background-color: #212529;
+  overflow-x: hidden;
 }
 .main .model-1 {
   width: 100%;
@@ -303,14 +285,6 @@ body {
   -ms-flex-line-pack: auto;
       align-content: auto;
 }
-.main .model1-info .span-model {
-  text-transform: uppercase;
-  color: #ffffff;
-  padding: 1.5em 0em;
-  text-align: center;
-  position: absolute;
-  top: 0;
-}
 .main .model1-info .text-model1 {
   height: 50vh;
   display: -webkit-box;
@@ -361,7 +335,7 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  border: 0px;
+  border: 2px solid #ffffff;
   padding: 1em 3em;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -371,10 +345,13 @@ body {
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-animation: appear 1s ease 1 both 2.5s;
-          animation: appear 1s ease 1 both 2.5s;
-  -webkit-animation: move-border 3s ease 1 both 5s;
-          animation: move-border 3s ease 1 both 5s;
+  -webkit-animation: appear 1s ease 1 both 4s;
+          animation: appear 1s ease 1 both 4s;
+}
+.main .model1-info .btn-new.hide {
+  display: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .main .model1-info .btn-scroll {
   font-weight: 600;

@@ -35,17 +35,6 @@
   }
 }
 
-//The button border appears
-@keyframes move-border {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    border: 2px solid $white;
-    opacity: 1;
-  }
-}
 
 //Model 1 images change with opacity
 @keyframes slider-animation {
