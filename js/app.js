@@ -16,18 +16,28 @@ $line.on('click', function(){
 $(window).on('scroll', function(){
 
       let pixel = $(window).scrollTop()
-      $btn.addClass('hide')
-
+      if (pixel > 80)
+      {
+            $btn.css({
+                  animation: 'none'
+            })
+            $btn.addClass('hide')
+      }
+      else
+      {
+            $btn.removeClass('hide')
+      } 
   
       $('.parallax1').css({
-          transform: `translateY(${-pixel}px)`
+            transform: `translateY(${-pixel}px)`
       })
+      
       $('.parallax2').css({
-          transform: `translateY(${-pixel/5}px)`
+            transform: `translateY(${-pixel/5}px)`
       })
 })
   
-
+//Function
 function moveToElement(){
       
       let operation = photo* -33.33

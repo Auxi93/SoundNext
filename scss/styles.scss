@@ -9,7 +9,6 @@ body {
   min-height: 100vh;
   background-color: $black;
   overflow-x: hidden;
-
   .model-1 {
     width: 100%;
     position: relative;
@@ -70,14 +69,17 @@ body {
       animation-timing-function: ease-in-out;
       background-size: cover;
     }
+
     #slide-1 {
       background-image: url(https://images7.alphacoders.com/391/391001.jpg);
       background-size: cover;
     }
+
     #slide-2 {
       animation-delay: 3s;
       background-image: url(https://images5.alphacoders.com/426/426029.jpg);
     }
+
     #slide-3 {
       animation-delay: 6s;
       background-image: url(https://images7.alphacoders.com/391/391001.jpg);
@@ -90,7 +92,6 @@ body {
     position: absolute;
     top: 0%;
     @include flexible(column, wrap, center, center, auto);
-
     .text-model1 {
       height: 50vh;
       @include flexible(row, wrap, center, flex-end, auto);
@@ -99,7 +100,7 @@ body {
     .logo-model1 {
       width: 40%;
       animation: appear 2s linear 1 both 2.4s;
-      transition: all .5s ease;
+      transition: all 0.5s ease;
     }
 
     .btns {
@@ -114,18 +115,16 @@ body {
       display: inline-flex;
       border: 2px solid $white;
       padding: 1em 3em;
-      transition: all 0.5s ease;
       font-weight: 600;
       color: $white;
       font-size: 1em;
       text-transform: uppercase;
-      transition: all .3s ease;
       animation: appear 1s ease 1 both 4s;
     }
 
     .btn-new.hide {
       display: none;
-      transition: all .4s ease;
+      transition: all 0.4s ease;
     }
 
     .btn-scroll {
@@ -134,9 +133,8 @@ body {
       padding: 0.6em 1.5em;
       font-size: 1em;
       padding: 12px;
-      transition: all .5s ease;
+      transition: all 0.5s ease;
       animation: appear 1.2s linear infinite both 8s;
-
     }
   }
 
@@ -144,7 +142,6 @@ body {
     @include flexible(row, nowrap, center, center, auto);
     min-height: 100vh;
     position: relative;
-
     &-info {
       width: 100%;
       min-height: 120vh;
@@ -242,9 +239,8 @@ body {
     width: 100%;
     min-height: 100px;
     background-color: $black;
-
     ul {
-      @include flexible(row, nowrap, flex-start, center, auto);
+      @include flexible(row, nowrap, flex-start, space-between, auto);
 
       li {
         width: 200px;
@@ -263,17 +259,16 @@ body {
 
   .model-4 {
     width: 100%;
-
     .wrapper {
       width: 100%;
       min-height: 400px;
       background-color: $light-black;
       display: grid;
-      grid-template-columns: repeat(4,1fr);
-      grid-template-rows: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
 
       &-one {
-        @include flexible (row, nowrap, center, center, auto);
+        @include flexible(row, nowrap, center, center, auto);
         grid-column: 1/3;
         grid-row: 1/5;
         position: relative;
@@ -293,11 +288,10 @@ body {
         grid-column: 4/5;
         grid-row: 3/5;
       }
-
     }
     .artist {
       &-sound {
-      width: 30%;
+        width: 30%;
       }
 
       &-p {
@@ -332,12 +326,10 @@ body {
         bottom: 4em;
         right: 4em;
       }
-
     }
   }
 
-  .model-5{
-
+  .model-5 {
     h4 {
       font-family: $font-default;
       font-weight: 100;
@@ -349,7 +341,7 @@ body {
     }
 
     .social-gallery {
-      @include flexible (row, nowrap, center, center, auto);
+      @include flexible(row, nowrap, center, center, auto);
 
       article {
         margin: 2em 0em;
@@ -358,15 +350,13 @@ body {
     }
 
     .social-icon {
-      color: #B3C6D4;
+      color: #b3c6d4;
       font-size: 2em;
       position: absolute;
       top: 10px;
       left: 10px;
       z-index: 4;
     }
-    
-
   }
 }
 .footer {
@@ -375,13 +365,13 @@ body {
 
   .centered {
     @include flexible(column, wrap, center, center, auto);
-
   }
+
   &-logo {
     width: 20%;
     margin: 6em 0em 2em;
   }
-  
+
   &-p {
     color: $white;
     font-size: 1em;
@@ -396,6 +386,7 @@ body {
     color: $white;
     font-size: 0.8em;
     margin: 2em 0em 4em;
+    text-align: center;
   }
 
   &-ul {
@@ -403,7 +394,7 @@ body {
   }
 
   &-li {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 300;
     color: $white;
     font-size: 0.6em;
@@ -415,7 +406,118 @@ body {
       color: $grey;
     }
   }
- 
 }
 
+@media screen and (max-width: 1440px) {
+  .main {
+    .model-2 .new-way {
+      width: 100%;
+    }
+  }
+}
 
+@media screen and (max-width: 780px) {
+  .main {
+    .model-2 {
+      h2 {
+        font-size: 2.5em;
+      }
+
+      .add-symbol {
+        width: 10%;
+      }
+    }
+
+    .model-4 {
+      .wrapper-one {
+        grid-column: 1/5;
+        grid-row: 1/3;
+        @include flexible(row, nowrap, space-between, center, auto);
+
+        .playout {
+          width: 15%;
+        }
+
+        .artist-h2 {
+          font-size: 1.3em;
+        }
+
+        .artist-film,
+        .artist-p {
+          font-size: 1em;
+        }
+
+        .artist-plus {
+          width: 6%;
+          bottom: 2em;
+          right: 2em;
+        }
+      }
+
+      .wrapper-two {
+        grid-column: 1/3;
+        grid-row: 3/5;
+      }
+    }
+  }
+
+  .footer .footer-ul {
+    @include flexible(row, wrap, center, center, auto);
+  }
+}
+@media screen and  (max-width: 480px) {
+  .main {
+    .model-2 {
+      .new-way {
+        width: 75%;
+        @include flexible(row, wrap, center, center, auto);
+        margin: 0em;
+  
+        .new-way-h3 {
+          font-size: 1em;
+        }
+
+        .new-way-p {
+          width: 100%;
+        }
+      }
+    }
+
+    .model-3 {
+      ul {
+        @include flexible(row, wrap, center, center, auto);
+      }
+    }
+
+    .model-4 {
+      .wrapper-one .playout {
+        width: 40%;
+      }
+
+      .wrapper-two {
+        grid-column: 1/5;
+        grid-row: 3/6;
+      }
+
+      .wrapper-three {
+        grid-column: 1/3;
+        grid-row: 4/5;
+      }
+
+      .wrapper-four {
+        grid-column: 3/5;
+        grid-row: 4/5;
+      }
+    }
+
+    .model-5 {
+      .social-gallery {
+        @include flexible(row, wrap, center, center, auto);
+      }
+    }
+  }
+
+  .footer .footer-ul {
+    @include flexible(row, wrap, space-between, center, auto);
+  }
+}
