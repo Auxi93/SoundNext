@@ -112,6 +112,34 @@ body {
     opacity: 1;
   }
 }
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @-webkit-keyframes slider-animation {
   0% {
     opacity: 0;
@@ -146,6 +174,40 @@ body {
     opacity: 0;
   }
 }
+@-webkit-keyframes movie-animation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes movie-animation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -159,15 +221,16 @@ body {
   width: 100%;
   position: relative;
 }
-.main .model-1 .nav-left {
+.main .model-1 .aside-left {
   width: 12%;
   position: absolute;
   left: 0;
   -webkit-animation: go-top 1.5s ease 1 both 1s;
           animation: go-top 1.5s ease 1 both 1s;
   z-index: 3;
+  cursor: default;
 }
-.main .model-1 .nav-left ul {
+.main .model-1 .aside-left ul {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,22 +247,23 @@ body {
   -ms-flex-line-pack: auto;
       align-content: auto;
 }
-.main .model-1 .nav-left li {
+.main .model-1 .aside-left li {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   color: #ffffff;
   text-transform: uppercase;
   font-size: 0.6em;
 }
-.main .model-1 .nav-right {
+.main .model-1 .aside-right {
   width: 12%;
   position: absolute;
   right: 0;
-  -webkit-animation: go-down 1.5s ease 1 both 1s;
-          animation: go-down 1.5s ease 1 both 1s;
+  -webkit-animation: go-down 1.5s ease 1 both 1.5s;
+          animation: go-down 1.5s ease 1 both 1.5s;
   z-index: 3;
+  cursor: default;
 }
-.main .model-1 .nav-right ul {
+.main .model-1 .aside-right ul {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,7 +280,7 @@ body {
   -ms-flex-line-pack: auto;
       align-content: auto;
 }
-.main .model-1 .nav-right li {
+.main .model-1 .aside-right li {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   color: #ffffff;
@@ -233,14 +297,8 @@ body {
   height: 100vh;
   position: absolute;
   opacity: 0;
-  -webkit-animation: slider-animation;
-          animation: slider-animation;
-  -webkit-animation-duration: 15s;
-          animation-duration: 15s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation: slider-animation 15s infinite ease-in-out;
+          animation: slider-animation 15s infinite ease-in-out;
   background-size: cover;
 }
 .main .model-1 #slide-1 {
@@ -302,8 +360,8 @@ body {
 }
 .main .model1-info .logo-model1 {
   width: 40%;
-  -webkit-animation: appear 2s linear 1 both 1.5s;
-          animation: appear 2s linear 1 both 1.5s;
+  -webkit-animation: appear 2s linear 1 both 2s;
+          animation: appear 2s linear 1 both 2s;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -338,8 +396,8 @@ body {
   color: #ffffff;
   font-size: 1em;
   text-transform: uppercase;
-  -webkit-animation: appear 1s ease 1 both 2s;
-          animation: appear 1s ease 1 both 2s;
+  -webkit-animation: appear 1s ease 1 both 2.5s;
+          animation: appear 1s ease 1 both 2.5s;
 }
 .main .model1-info .btn-new.hide {
   display: none;
@@ -354,8 +412,9 @@ body {
   padding: 12px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  -webkit-animation: appear 1.2s linear infinite both 2.5s;
-          animation: appear 1.2s linear infinite both 2.5s;
+  -webkit-animation: pulse 2s ease infinite both 3s;
+          animation: pulse 2s ease infinite both 3s;
+  cursor: default;
 }
 .main .model-2 {
   display: -webkit-box;
@@ -407,11 +466,13 @@ body {
   top: 0;
   z-index: 4;
   opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .main .model-2 .span-model.active {
   opacity: 1;
 }
-.main .model-2 h2 {
+.main .model-2 h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 3.5em;
   font-weight: 800;
@@ -441,7 +502,7 @@ body {
 .main .model-2 .new-way img {
   margin: 2em;
 }
-.main .model-2 .new-way-h3 {
+.main .model-2 .new-way-h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 1.5em;
@@ -484,6 +545,9 @@ body {
   width: calc(100% / 3);
   min-height: 100vh;
 }
+.main .model-2 .box-line {
+  padding: 5px 4px;
+}
 .main .model-2 .slider-lines {
   width: 100%;
   height: 20px;
@@ -515,7 +579,7 @@ body {
   margin: 0 0.4em;
   cursor: pointer;
   bottom: 2em;
-  z-index: 4;
+  z-index: 5;
 }
 .main .model-2 .lines-ul {
   width: 100%;
@@ -544,7 +608,7 @@ body {
   width: 50px;
   background-color: #2423d9;
   height: 6px;
-  margin: 0 0.4em;
+  margin: 0px 10px 0px 10px;
   opacity: 0;
 }
 .main .model-2 .line-opa.active {
@@ -579,6 +643,7 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   font-size: 1em;
+  cursor: default;
 }
 .main .model-3 ul li img {
   width: 50%;
@@ -724,13 +789,15 @@ body {
 .main .model-4 .wrapper-three .overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 4;
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  opacity: 0;
+  -webkit-animation: movie-animation 4s infinite linear 1.5s;
+          animation: movie-animation 4s infinite linear 1.5s;
 }
 .main .model-4 .wrapper-three img {
   width: 100%;
@@ -743,8 +810,6 @@ body {
 .main .model-4 .wrapper-three:hover .overlay img {
   width: 100%;
   height: 100%;
-  -webkit-animation: appear 1s linear 1 both 1s;
-          animation: appear 1s linear 1 both 1s;
 }
 .main .model-4 .wrapper-four {
   -ms-grid-column: 4;
@@ -762,9 +827,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
   opacity: 0;
+  -webkit-animation: movie-animation 4s infinite linear 2s;
+          animation: movie-animation 4s infinite linear 2s;
 }
 .main .model-4 .wrapper-four img {
   width: 100%;
@@ -777,8 +842,6 @@ body {
 .main .model-4 .wrapper-four:hover .overlay img {
   width: 100%;
   height: 100%;
-  -webkit-animation: appear 1s linear 1 both 1s;
-          animation: appear 1s linear 1 both 1s;
 }
 .main .model-4 .artist-sound {
   width: 30%;
@@ -844,11 +907,14 @@ body {
 }
 .main .model-5 .social-icon {
   color: #b3c6d4;
-  font-size: 2em;
+  font-size: 3em;
   position: absolute;
   top: 10px;
   left: 10px;
   z-index: 4;
+}
+.main .model-5 .social-icon:hover {
+  color: #2423d9;
 }
 
 .footer {
@@ -874,7 +940,7 @@ body {
 }
 .footer-logo {
   width: 20%;
-  margin: 6em 0em 2em;
+  margin: 6em 0em 2em 0em;
 }
 .footer-p {
   color: #ffffff;
@@ -887,8 +953,11 @@ body {
 .footer-span {
   color: #ffffff;
   font-size: 0.8em;
-  margin: 2em 0em 4em;
+  margin: 2em 0em 4em 0em;
   text-align: center;
+}
+.footer-span :hover {
+  color: #b3c6d4;
 }
 .footer-ul {
   display: -webkit-box;
@@ -906,6 +975,7 @@ body {
           align-items: center;
   -ms-flex-line-pack: auto;
       align-content: auto;
+  margin: 3em 0em 5em 0em;
 }
 .footer-li {
   font-family: "Open Sans", sans-serif;
@@ -918,7 +988,7 @@ body {
   padding-bottom: 1em;
 }
 .footer-li :hover {
-  color: #9fa2ac;
+  color: #b3c6d4;
 }
 
 @media screen and (max-width: 1440px) {
@@ -927,7 +997,7 @@ body {
   }
 }
 @media screen and (max-width: 780px) {
-  .main .model-2 h2 {
+  .main .model-2 h3 {
     font-size: 2.5em;
   }
   .main .model-2 .add-symbol {
@@ -1020,6 +1090,9 @@ body {
   .main .model-2-info {
     padding-top: 100px;
   }
+  .main .model-2 h3 {
+    font-size: 2em;
+  }
   .main .model-2 .new-way {
     width: 75%;
     display: -webkit-box;
@@ -1039,7 +1112,7 @@ body {
         align-content: auto;
     margin: 0em;
   }
-  .main .model-2 .new-way .new-way-h3 {
+  .main .model-2 .new-way .new-way-h4 {
     font-size: 1em;
   }
   .main .model-2 .new-way .new-way-p {
@@ -1096,6 +1169,9 @@ body {
     -ms-grid-row-span: 1;
     grid-row: 4/5;
   }
+  .main .model-4 .artist-sound {
+    width: 50%;
+  }
   .main .model-5 .social-gallery {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1113,8 +1189,11 @@ body {
     -ms-flex-line-pack: auto;
         align-content: auto;
   }
+  .main .model-5 .social-icon {
+    font-size: 2em;
+  }
 
-  .footer .footer-ul {
+  .footer-ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1130,5 +1209,9 @@ body {
             align-items: center;
     -ms-flex-line-pack: auto;
         align-content: auto;
+  }
+  .footer-logo {
+    width: 60%;
+    margin: 6em 0em 2em 0em;
   }
 }

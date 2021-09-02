@@ -22,12 +22,13 @@ body {
     width: 100%;
     position: relative;
 
-    .nav-left {
+    .aside-left {
       width: 12%;
       position: absolute;
       left: 0;
       animation: go-top 1.5s ease 1 both 1s;
       z-index: 3;
+      cursor: default;
 
       ul {
         min-height: 100vh;
@@ -42,12 +43,13 @@ body {
       }
     }
 
-    .nav-right {
+    .aside-right {
       width: 12%;
       position: absolute;
       right: 0;
-      animation: go-down 1.5s ease 1 both 1s;
+      animation: go-down 1.5s ease 1 both 1.5s;
       z-index: 3;
+      cursor: default;
 
       ul {
         min-height: 100vh;
@@ -73,10 +75,7 @@ body {
       height: 100vh;
       position: absolute;
       opacity: 0;
-      animation: slider-animation;
-      animation-duration: 15s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
+      animation: slider-animation 15s infinite ease-in-out;
       background-size: cover;
     }
 
@@ -105,6 +104,7 @@ body {
     position: absolute;
     top: 0%;
     @include flexible(column, wrap, center, center, auto);
+
     .text-model1 {
       height: 50vh;
       @include flexible(row, wrap, center, flex-end, auto);
@@ -112,7 +112,7 @@ body {
 
     .logo-model1 {
       width: 40%;
-      animation: appear 2s linear 1 both 1.5s;
+      animation: appear 2s linear 1 both 2s;
       transition: all 0.5s ease;
     }
 
@@ -132,7 +132,7 @@ body {
       color: $white;
       font-size: 1em;
       text-transform: uppercase;
-      animation: appear 1s ease 1 both 2s;
+      animation: appear 1s ease 1 both 2.5s;
     }
 
     .btn-new.hide {
@@ -147,7 +147,8 @@ body {
       font-size: 1em;
       padding: 12px;
       transition: all 0.5s ease;
-      animation: appear 1.2s linear infinite both 2.5s;
+      animation: pulse 2s ease infinite both 3s;
+      cursor: default;
     }
   }
 
@@ -174,13 +175,14 @@ body {
       top: 0;
       z-index: 4;
       opacity: 0;
+      transition: all .3s ease;
     }
 
     .span-model.active {
       opacity: 1;
     }
 
-    h2 {
+    h3 {
       font-family: $font-default;
       font-size: 3.5em;
       font-weight: 800;
@@ -193,11 +195,12 @@ body {
       width: 64%;
       @include flexible(row, nowrap, flex-start, center, auto);
       margin-top: 7em;
+
       img {
         margin: 2em;
       }
 
-      &-h3 {
+      &-h4 {
         font-family: $font-default;
         font-weight: 300;
         font-size: 1.5em;
@@ -231,6 +234,10 @@ body {
       min-height: 100vh;
     }
 
+    .box-line {
+      padding: 5px 4px;
+    }
+
     .slider-lines {
       width: 100%;
       height: 20px;
@@ -249,7 +256,7 @@ body {
       margin: 0 0.4em;
       cursor: pointer;
       bottom: 2em;
-      z-index: 4;
+      z-index: 5;
     }
 
     .lines-ul {
@@ -266,7 +273,7 @@ body {
       width: 50px;
       background-color: $blue;
       height: 6px;
-      margin: 0 0.4em;
+      margin:0px 10px 0px 10px;
       opacity: 0;
     }
 
@@ -291,6 +298,7 @@ body {
           color: $white;
           text-transform: uppercase;
           font-size: 1em;
+          cursor: default;
         }
 
         img {
@@ -331,7 +339,7 @@ body {
         .overlay {
           width: 100%;
           height: 100%;
-          background-color: rgba(255, 255, 255, 0.5);
+          background-color: $white50;
           position: absolute;
           top: 0;
           left: 0;
@@ -352,12 +360,13 @@ body {
         .overlay {
           width: 100%;
           height: 100%;
-          background-color: rgba(255, 255, 255, 0.5);
+          z-index: 4;
           position: absolute;
           top: 0;
           left: 0;
-          transition: all 0.5s ease;
           opacity: 0;
+          transition: all .5s ease;
+          animation: movie-animation 4s infinite linear 1.5s;
         }
 
         img {
@@ -372,7 +381,6 @@ body {
           img {
             width: 100%;
             height: 100%;
-            animation: appear 1s linear 1 both 1s;
           }
         }
       }
@@ -385,12 +393,12 @@ body {
         .overlay {
           width: 100%;
           height: 100%;
-          background-color: rgba(255, 255, 255, 0.5);
+          background-color: $white50;
           position: absolute;
           top: 0;
           left: 0;
-          transition: all 0.5s ease;
           opacity: 0;
+          animation: movie-animation 4s infinite linear 2s;
         }
 
         img {
@@ -405,7 +413,6 @@ body {
           img {
             width: 100%;
             height: 100%;
-            animation: appear 1s linear 1 both 1s;
           }
         }
       }
@@ -451,6 +458,7 @@ body {
   }
 
   .model-5 {
+
     h4 {
       font-family: $font-default;
       font-weight: 100;
@@ -471,12 +479,15 @@ body {
     }
 
     .social-icon {
-      color: #b3c6d4;
-      font-size: 2em;
+      color: $grey;
+      font-size: 3em;
       position: absolute;
       top: 10px;
       left: 10px;
       z-index: 4;
+    }
+    .social-icon:hover {
+      color: $blue;
     }
   }
 }
@@ -490,7 +501,7 @@ body {
 
   &-logo {
     width: 20%;
-    margin: 6em 0em 2em;
+    margin: 6em 0em 2em 0em;
   }
 
   &-p {
@@ -506,12 +517,16 @@ body {
   &-span {
     color: $white;
     font-size: 0.8em;
-    margin: 2em 0em 4em;
+    margin: 2em 0em 4em 0em;
     text-align: center;
+    :hover{
+      color: $grey;
+    }
   }
 
   &-ul {
     @include flexible(row, nowrap, center, center, auto);
+    margin: 3em 0em 5em 0em;
   }
 
   &-li {
@@ -531,6 +546,7 @@ body {
 
 @media screen and (max-width: 1440px) {
   .main {
+
     .model-2 .new-way {
       width: 100%;
     }
@@ -539,8 +555,10 @@ body {
 
 @media screen and (max-width: 780px) {
   .main {
+
     .model-2 {
-      h2 {
+
+      h3 {
         font-size: 2.5em;
       }
 
@@ -550,16 +568,19 @@ body {
     }
 
     .model-3 {
+
       ul li p {
         width: 100px;
         font-size: 0.7em;
       }
+
       ul li img {
         width: 80%;
         margin: auto 1em;
       }
     }
     .model-4 {
+
       .wrapper-one {
         grid-column: 1/5;
         grid-row: 1/3;
@@ -598,7 +619,9 @@ body {
 }
 @media screen and (max-width: 480px) {
   .main {
+
     .model-1 {
+
       .btn-new {
         padding: 2em 0em;
         padding: 0.6em 2em;
@@ -617,12 +640,16 @@ body {
         padding-top: 100px;
       }
 
+      h3 {
+        font-size: 2em;
+      }
+
       .new-way {
         width: 75%;
         @include flexible(row, wrap, center, center, auto);
         margin: 0em;
 
-        .new-way-h3 {
+        .new-way-h4 {
           font-size: 1em;
         }
 
@@ -633,6 +660,7 @@ body {
     }
 
     .model-3 {
+
       ul {
         @include flexible(row, wrap, center, center, auto);
       }
@@ -648,6 +676,7 @@ body {
     }
 
     .model-4 {
+
       .wrapper-one .playout {
         width: 40%;
       }
@@ -666,16 +695,33 @@ body {
         grid-column: 3/5;
         grid-row: 4/5;
       }
+
+      .artist-sound {
+        width: 50%;
+      }
     }
 
     .model-5 {
+
       .social-gallery {
         @include flexible(row, wrap, center, center, auto);
+      }
+
+      .social-icon {
+        font-size: 2em;
       }
     }
   }
 
-  .footer .footer-ul {
-    @include flexible(row, wrap, space-between, center, auto);
+  .footer {
+
+    &-ul {
+      @include flexible(row, wrap, space-between, center, auto);
+    }
+
+    &-logo {
+      width: 60%;
+      margin: 6em 0em 2em 0em;
+    }
   }
 }

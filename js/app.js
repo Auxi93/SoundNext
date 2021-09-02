@@ -6,27 +6,29 @@ const $line = $('.slider-line')
 const $lineOpa = $('.line-opa')
 const $bigSlider =  $('.big-slider')
 
+const verticalPixelToHideButton = 80
 
-let photo = 0
+let photoIndex = 0
 
-//Module 2, Slider with three images
-$line.on('click', function(){
+//Slider with three images
+$line.on('click', function() {
 
-     //First, mark the position.
-      photo = $line.index($(this))
+     //Store the position.
+      photoIndex = $line.index($(this))
  
-      moveToElement()
+      moveToElement($bigSlider, photoIndex, $line.length)
       
-      //Removes the active class from all line and hide the blue lines.
+      //Remove the active class from all line and hide the blue lines.
       $line.removeClass('active')
       $lineOpa.removeClass('active')
 
-      //Adds the active class to the line you click on and shows the blue line indicating the position of the photo.
-      $line.eq(photo).addClass('active')
-      $lineOpa.eq(photo).addClass('active')
+      //Add the active class to the line you click on and shows the blue line indicating the position of the photoIndex.
+      $line.eq(photoIndex).addClass('active')
+      $lineOpa.eq(photoIndex).addClass('active')
 })
 
-$(window).on('scroll', function(){
+//Scroll 
+$(window).on('scroll', function() {
       
       // Take from the window the scrollTop
       let pixel = $(window).scrollTop()
@@ -35,22 +37,19 @@ $(window).on('scroll', function(){
       let activated = elementDistance - ( heightV / 2)
 
       //Sound next appears when you scroll down in module 2
-      if( pixel >= activated){
+      if( pixel >= activated) {
             $spanModel.addClass('active')
-      }else{
+      } else {
             $spanModel.removeClass('active')
       }
 
       //The button is hidden when scrolling down and appears when scrolling up again
-      if (pixel > 80)
-      {
+      if (pixel > verticalPixelToHideButton) {
             $btn.css({
                   animation: 'none'
             })
             $btn.addClass('hide')
-      }
-      else
-      {
+      } else {
             $btn.removeClass('hide')
       } 
 
@@ -66,20 +65,18 @@ $(window).on('scroll', function(){
       $('.parallax3').css({
             transform: `translateY(${-pixel / 4}px)`
       })
-
-
 })
   
 //Function
-function moveToElement(){
+function moveToElement($slider, elementIndex, maxElementCount) {
 
       // //Calculate the percentage that needs to move the slider      
-      let operation = photo * - (100 / $line.length)
+      let operation = elementIndex * - (100 / maxElementCount)
 
       //Move it on the horizontal axis
       let property = 'translateX(' + operation + '%)'
          
-      $bigSlider.css({
+      $slider.css({
             transform:property
       })
 }

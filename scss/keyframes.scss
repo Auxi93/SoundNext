@@ -1,5 +1,5 @@
 
-//Upload the text on the left
+//Upload the text
 @keyframes go-top {
   from {
     transform: translateY(50%);
@@ -10,7 +10,7 @@
   }
 }
 
-//Down the text on the right
+//Down the text
 @keyframes go-down {
   from {
     transform: translateY(-50%);
@@ -21,7 +21,7 @@
   }
 }
 
-//The sound next logo appears and a few minutes later part of a button too.
+//Show elements with transition
 @keyframes appear {
   from {
     opacity: 0;
@@ -31,8 +31,23 @@
   }
 }
 
+//Blink smothly while retaing maxium opacity for a bit
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
-//Model 1 images change with opacity
+//Opacity transition
 @keyframes slider-animation {
   0% {
     opacity: 0;
@@ -45,6 +60,25 @@
   }
   30% {
     opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+//Opacity with differents movies
+@keyframes movie-animation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
   }
   100% {
     opacity: 0;
