@@ -6,6 +6,9 @@ const $line = $('.slider-line')
 const $lineOpa = $('.line-opa')
 const $bigSlider =  $('.big-slider')
 
+const $movie1 = $('.wrapper-three')
+const $movie2 = $('.wrapper-four')
+
 const verticalPixelToHideButton = 80
 
 let photoIndex = 0
@@ -66,17 +69,50 @@ $(window).on('scroll', function() {
             transform: `translateY(${-pixel / 4}px)`
       })
 })
-  
-//Function
+
+//Movies Hover
+$movie1.hover(
+      movieMouseEnter,
+      movieMouseExit
+)
+$movie2.hover(
+      movieMouseEnter,
+      movieMouseExit
+)
+
+
+
+//Functions
 function moveToElement($slider, elementIndex, maxElementCount) {
 
-      // //Calculate the percentage that needs to move the slider      
-      let operation = elementIndex * - (100 / maxElementCount)
+      //Calculate the percentage that needs to move the slider      
+      let operation = elementIndex * -(100 / maxElementCount)
 
       //Move it on the horizontal axis
       let property = 'translateX(' + operation + '%)'
          
       $slider.css({
             transform:property
+      })
+}
+
+function movieMouseEnter() {
+      let $overlay = $(this).find('.overlay');
+      //Get current opacity, as it is being modified by the animation
+      let opacity = $overlay.css('opacity')
+      //Remove the animation, and round the opacity to the closest limit
+      $overlay.css({
+            animation: "none",
+            opacity: opacity < 0.5 ? 0 : 1
+      })
+}
+
+function movieMouseExit() {
+      let $overlay = $(this).find('.overlay');
+      //Get current opacity (it can only be 0 or 1 because we set it on movieMouseEnter)
+      let opacity = $overlay.css('opacity')
+      //Play one animation or another depending on the current opacity
+      $overlay.css({
+            animation: opacity == 0 ? 'movie-animation 4s infinite linear 1s' : 'movie-animation2 4s infinite linear 1s'
       })
 }

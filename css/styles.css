@@ -208,6 +208,40 @@ body {
     opacity: 0;
   }
 }
+@-webkit-keyframes movie-animation2 {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes movie-animation2 {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -789,13 +823,10 @@ body {
 .main .model-4 .wrapper-three .overlay {
   width: 100%;
   height: 100%;
-  z-index: 4;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
   -webkit-animation: movie-animation 4s infinite linear 1.5s;
           animation: movie-animation 4s infinite linear 1.5s;
 }
@@ -803,13 +834,6 @@ body {
   width: 100%;
   height: 100%;
   padding: 0;
-}
-.main .model-4 .wrapper-three:hover .overlay {
-  opacity: 1;
-}
-.main .model-4 .wrapper-three:hover .overlay img {
-  width: 100%;
-  height: 100%;
 }
 .main .model-4 .wrapper-four {
   -ms-grid-column: 4;
@@ -823,7 +847,6 @@ body {
 .main .model-4 .wrapper-four .overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: 0;
   left: 0;
@@ -835,13 +858,6 @@ body {
   width: 100%;
   height: 100%;
   padding: 0;
-}
-.main .model-4 .wrapper-four:hover .overlay {
-  opacity: 1;
-}
-.main .model-4 .wrapper-four:hover .overlay img {
-  width: 100%;
-  height: 100%;
 }
 .main .model-4 .artist-sound {
   width: 30%;
