@@ -1044,8 +1044,11 @@ body {
 .main .model-4 .wrapper-one .artist-p {
     font-size: 1em;
   }
+  .main .model-4 .wrapper-one .artist-sound {
+    width: 25%;
+  }
   .main .model-4 .wrapper-one .artist-plus {
-    width: 6%;
+    width: 4%;
     bottom: 2em;
     right: 2em;
   }
@@ -1056,6 +1059,9 @@ body {
     -ms-grid-row: 3;
     -ms-grid-row-span: 2;
     grid-row: 3/5;
+  }
+  .main .model-5 .social-icon {
+    font-size: 2em;
   }
 
   .footer .footer-ul {
@@ -1190,7 +1196,7 @@ body {
         align-content: auto;
   }
   .main .model-5 .social-icon {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .footer-ul {
