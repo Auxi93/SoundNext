@@ -21,16 +21,13 @@
   }
 }
 
-//The sound next logo appears and a few minutes later part of a button and the other button appears.
+//The sound next logo appears and a few minutes later part of a button too.
 
 @keyframes appear {
-  0% {
+  from {
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
+  to {
     opacity: 1;
   }
 }

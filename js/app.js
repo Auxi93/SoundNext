@@ -1,4 +1,5 @@
 const $line = $('.slider-line')
+const $lineOpa = $('.line-opa')
 const $bigSlider =  $('.big-slider')
 const $btn = $('.btn-new')
 
@@ -33,7 +34,11 @@ $(window).on('scroll', function(){
       })
       
       $('.parallax2').css({
-            transform: `translateY(${-pixel/5}px)`
+            transform: `translateY(${-pixel/2}px)`
+      })
+
+      $('.parallax3').css({
+            transform: `translateY(${-pixel/4}px)`
       })
 })
   
@@ -49,5 +54,7 @@ function moveToElement(){
       })
 
       $line.removeClass('active')
+      $lineOpa.removeClass('active')
       $line.eq(photo).addClass('active')
+      $lineOpa.eq(photo).addClass('active')
 }
