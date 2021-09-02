@@ -235,8 +235,8 @@ body {
   opacity: 0;
   -webkit-animation: slider-animation;
           animation: slider-animation;
-  -webkit-animation-duration: 20s;
-          animation-duration: 20s;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
@@ -244,19 +244,20 @@ body {
   background-size: cover;
 }
 .main .model-1 #slide-1 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
   background-image: url(../assets/img-slider1-1.png);
-  background-size: cover;
   background-position: center;
 }
 .main .model-1 #slide-2 {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
   background-image: url(../assets/img-slider1-2.png);
   background-position: center;
 }
 .main .model-1 #slide-3 {
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
   background-image: url(../assets/img-slider1-3.png);
   background-position: center;
 }
@@ -405,6 +406,10 @@ body {
   position: absolute;
   top: 0;
   z-index: 4;
+  opacity: 0;
+}
+.main .model-2 .span-model.active {
+  opacity: 1;
 }
 .main .model-2 h2 {
   font-family: "Montserrat", sans-serif;

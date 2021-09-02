@@ -1,4 +1,13 @@
-@import "reset", "variables", "keyframes", "mixins";
+@import "reset";
+
+//Colors and families
+@import "variables";
+
+//Animations
+@import "keyframes";
+
+//Mixins
+@import "mixins";
 
 body {
   font-family: $font-default;
@@ -8,11 +17,11 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: $black;
-  
+
   .model-1 {
     width: 100%;
     position: relative;
-    
+
     .nav-left {
       width: 12%;
       position: absolute;
@@ -65,26 +74,26 @@ body {
       position: absolute;
       opacity: 0;
       animation: slider-animation;
-      animation-duration: 20s;
+      animation-duration: 15s;
       animation-iteration-count: infinite;
       animation-timing-function: ease-in-out;
       background-size: cover;
     }
 
     #slide-1 {
+      animation-delay: 0s;
       background-image: url(../assets/img-slider1-1.png);
-      background-size: cover;
       background-position: center;
     }
 
     #slide-2 {
-      animation-delay: 3s;
+      animation-delay: 5s;
       background-image: url(../assets/img-slider1-2.png);
       background-position: center;
     }
 
     #slide-3 {
-      animation-delay: 6s;
+      animation-delay: 10s;
       background-image: url(../assets/img-slider1-3.png);
       background-position: center;
     }
@@ -164,6 +173,11 @@ body {
       position: absolute;
       top: 0;
       z-index: 4;
+      opacity: 0;
+    }
+
+    .span-model.active {
+      opacity: 1;
     }
 
     h2 {
@@ -193,7 +207,7 @@ body {
 
       &-p {
         width: 60%;
-        font-family: "Open Sans", sans-serif;
+        font-family: $font-open;
         font-weight: 300;
         color: $white;
         font-size: 1em;
@@ -238,7 +252,7 @@ body {
       z-index: 4;
     }
 
-    .lines-ul{
+    .lines-ul {
       width: 100%;
       height: 20px;
       padding: 1em;
@@ -259,7 +273,6 @@ body {
     .line-opa.active {
       opacity: 1;
     }
-
   }
 
   .model-3 {
@@ -271,7 +284,6 @@ body {
       padding: 3em 0em;
 
       li {
-
         p {
           width: 210px;
           font-family: $font-default;
@@ -323,10 +335,10 @@ body {
           position: absolute;
           top: 0;
           left: 0;
-          transition: all .5s ease;
+          transition: all 0.5s ease;
           opacity: 0;
         }
-        
+
         &:hover .overlay {
           opacity: 1;
         }
@@ -344,7 +356,7 @@ body {
           position: absolute;
           top: 0;
           left: 0;
-          transition: all .5s ease;
+          transition: all 0.5s ease;
           opacity: 0;
         }
 
@@ -362,7 +374,7 @@ body {
             height: 100%;
             animation: appear 1s linear 1 both 1s;
           }
-        } 
+        }
       }
 
       &-four {
@@ -377,7 +389,7 @@ body {
           position: absolute;
           top: 0;
           left: 0;
-          transition: all .5s ease;
+          transition: all 0.5s ease;
           opacity: 0;
         }
 
@@ -395,7 +407,7 @@ body {
             height: 100%;
             animation: appear 1s linear 1 both 1s;
           }
-        } 
+        }
       }
     }
     .artist {
@@ -439,7 +451,6 @@ body {
   }
 
   .model-5 {
-
     h4 {
       font-family: $font-default;
       font-weight: 100;
@@ -504,7 +515,7 @@ body {
   }
 
   &-li {
-    font-family: "Open Sans", sans-serif;
+    font-family: $font-open;
     font-weight: 300;
     color: $white;
     font-size: 0.6em;
@@ -528,9 +539,7 @@ body {
 
 @media screen and (max-width: 780px) {
   .main {
-
     .model-2 {
-
       h2 {
         font-size: 2.5em;
       }
@@ -543,7 +552,7 @@ body {
     .model-3 {
       ul li p {
         width: 100px;
-        font-size: .7em;
+        font-size: 0.7em;
       }
       ul li img {
         width: 80%;
@@ -551,7 +560,6 @@ body {
       }
     }
     .model-4 {
-
       .wrapper-one {
         grid-column: 1/5;
         grid-row: 1/3;
@@ -588,27 +596,24 @@ body {
     @include flexible(row, wrap, center, center, auto);
   }
 }
-@media screen and  (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .main {
-
-    .model-1{
-      
+    .model-1 {
       .btn-new {
         padding: 2em 0em;
-        padding: .6em 2em;
+        padding: 0.6em 2em;
         font-weight: 400;
-        font-size: .8em;
+        font-size: 0.8em;
       }
 
       .btn-scroll {
         font-weight: 400;
-        font-size: .8em;
+        font-size: 0.8em;
       }
     }
 
     .model-2 {
-
-      &-info {  
+      &-info {
         padding-top: 100px;
       }
 
@@ -616,7 +621,7 @@ body {
         width: 75%;
         @include flexible(row, wrap, center, center, auto);
         margin: 0em;
-  
+
         .new-way-h3 {
           font-size: 1em;
         }
@@ -628,7 +633,6 @@ body {
     }
 
     .model-3 {
-
       ul {
         @include flexible(row, wrap, center, center, auto);
       }
@@ -665,7 +669,6 @@ body {
     }
 
     .model-5 {
-
       .social-gallery {
         @include flexible(row, wrap, center, center, auto);
       }

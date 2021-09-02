@@ -1,8 +1,11 @@
 //Constants
+const $btn = $('.btn-new')
+const $spanModel = $('.span-model')
+
 const $line = $('.slider-line')
 const $lineOpa = $('.line-opa')
 const $bigSlider =  $('.big-slider')
-const $btn = $('.btn-new')
+
 
 let photo = 0
 
@@ -24,8 +27,19 @@ $line.on('click', function(){
 })
 
 $(window).on('scroll', function(){
+      
       // Take from the window the scrollTop
       let pixel = $(window).scrollTop()
+      let elementDistance = $('.model-2').offset().top
+      let heightV = $(window).height()
+      let activated = elementDistance - ( heightV / 2)
+
+      //Sound next appears when you scroll down in module 2
+      if( pixel >= activated){
+            $spanModel.addClass('active')
+      }else{
+            $spanModel.removeClass('active')
+      }
 
       //The button is hidden when scrolling down and appears when scrolling up again
       if (pixel > 80)
@@ -46,22 +60,24 @@ $(window).on('scroll', function(){
       })
       
       $('.parallax2').css({
-            transform: `translateY(${-pixel/2}px)`
+            transform: `translateY(${-pixel / 2}px)`
       })
 
       $('.parallax3').css({
-            transform: `translateY(${-pixel/4}px)`
+            transform: `translateY(${-pixel / 4}px)`
       })
+
+
 })
   
 //Function
 function moveToElement(){
 
       // //Calculate the percentage that needs to move the slider      
-      let operation = photo* -(100 / $line.length)
+      let operation = photo * - (100 / $line.length)
 
       //Move it on the horizontal axis
-      let property = 'translateX('+ operation + '%)'
+      let property = 'translateX(' + operation + '%)'
          
       $bigSlider.css({
             transform:property
