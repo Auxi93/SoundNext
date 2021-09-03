@@ -1099,6 +1099,9 @@ body {
   }
 }
 @media screen and (max-width: 480px) {
+  .main .model-1 .aside-left, .main .model-1 .aside-right {
+    width: 15%;
+  }
   .main .model-1 .btn-new {
     padding: 2em 0em;
     padding: 0.6em 2em;
@@ -1114,6 +1117,12 @@ body {
   }
   .main .model-2 h3 {
     font-size: 2em;
+  }
+  .main .model-2 .slider-line {
+    width: 35px;
+  }
+  .main .model-2 .line-opa {
+    width: 37px;
   }
   .main .model-2 .new-way {
     width: 75%;

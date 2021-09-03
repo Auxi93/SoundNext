@@ -544,6 +544,7 @@ body {
       .add-symbol {
         width: 10%;
       }
+
     }
 
     .model-3 {
@@ -613,6 +614,11 @@ body {
 
     .model-1 {
 
+      .aside-left, .aside-right {
+        width: 15%;
+     }
+
+
       .btn-new {
         padding: 2em 0em;
         padding: 0.6em 2em;
@@ -633,6 +639,14 @@ body {
 
       h3 {
         font-size: 2em;
+      }
+
+      .slider-line {
+        width: 35px;
+      }
+
+      .line-opa {
+        width: 37px;
       }
 
       .new-way {
